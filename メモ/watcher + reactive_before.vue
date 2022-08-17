@@ -5,7 +5,7 @@ const state = reactive({
   count: 0,
 });
 
-watch(() => state.count, (count, previousCount) => {
+watch(state.count, (count, previousCount) => {
   console.log('count:', count);
   console.log('previousCount:', previousCount);
 });
